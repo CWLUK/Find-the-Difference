@@ -1,0 +1,16 @@
+class Solution {
+public:
+    char findTheDifference(string s, string t) {
+        char result;
+        for (char ch : t){
+            int cur = s.find(ch);
+            if (cur != string::npos){
+                s[cur] = ' ';
+            } else{
+                result = ch;
+                break;
+            }
+        }
+        return result;
+    }
+};
